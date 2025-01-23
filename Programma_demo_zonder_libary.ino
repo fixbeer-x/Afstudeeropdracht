@@ -347,10 +347,9 @@ void loop() {
       beweegX_drone_start(22220); // Beweeg naar 10 stappen
       homeMotors();
       state_button = 0;
-    }
-    state_button = 0;
-
-    if(digitalRead(limitSwitchB_A) == LOW && digitalRead(limitSwitchB_B) == LOW){
+    }  
+    
+    else if(digitalRead(limitSwitchB_A) == LOW && digitalRead(limitSwitchB_B) == LOW){
       // Breng de batterijen naar de lege oplader
       beweegX_drone_oplader1(22220); // Beweeg naar 50 stappen
       delay(500); // Wacht 1 seconde
